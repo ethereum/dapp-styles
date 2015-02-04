@@ -3,6 +3,41 @@
 
 These styles give a simple basic layout for your Ðapps.
 
+## The Design
+
+The Ethereum Dapp design style is meant to ease the task of designing clear and good looking App interfaces. It uses as few images as possible for the UI and instead uses colors and icons for differentiating hierarchies. In order to make each Dapp unique and help the user quickly realize where he is even when navigating different instances of the same app, we use GeoPatterns in backgrounds when they refer to a unique instance of something. The fonts used are all open source, Source Sans, from Adobe which has a rich family and multiple styles and Montserrat for bold and strong titles. We also use a font for vector icons to ensure scalability and easy customization.
+
+Most apps are different variations of some simple elements: 
+
+* Use the header on the top with tabs, when your Dapp uses a few constant sections (ie. send and receive)
+
+* Use the left sidebar when your Dapp has a large number of sources for content (ie. a list of chats)
+
+* Use the right action bar for actions to be done with the current content 
+
+* Use Dapp-overflow if you want the sections to scroll independently and to remain fixed on the screen
+
+### Screenshots 
+**These are early screenshots and many things are bound to change during development**
+
+![Generic contract showing styles](https://cloud.githubusercontent.com/assets/112898/6045448/4eb71c24-ac81-11e4-8498-7a4153530841.png)
+
+![Democracy DAO](https://cloud.githubusercontent.com/assets/112898/6045449/535c483a-ac81-11e4-8957-e2c1cb9af27d.png)
+
+![Democracy DAO - Pink](https://cloud.githubusercontent.com/assets/112898/6045452/5a188a6c-ac81-11e4-9a8c-40eda1dc6faa.png)
+
+![A custom currency contract](https://cloud.githubusercontent.com/assets/112898/6045454/5e2283f6-ac81-11e4-8bc3-727f6ac33b27.png)
+
+
+![An Escrow contract](https://cloud.githubusercontent.com/assets/112898/6045463/6952295c-ac81-11e4-8e2b-76b7f7e38b3c.png)
+
+![Chat Application](https://cloud.githubusercontent.com/assets/112898/6045468/6e9d2ee8-ac81-11e4-8d17-79762336ed4d.png)
+
+
+![Chat application, profile view](https://cloud.githubusercontent.com/assets/112898/6045469/7316d3ca-ac81-11e4-8855-5a88fc0ac92e.png)
+
+
+
 ## Setup
 
 
