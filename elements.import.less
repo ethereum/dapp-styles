@@ -59,10 +59,9 @@
         .opacity(0);
     }
 }
-
 .active .dapp-count {
     background-color: @colorGrayLight;
-    color: @colorMainBackground;    
+    color: darken(@colorBackgroundAside, 20%);    
 }
 
 .dapp-modal-buttons {
@@ -94,7 +93,7 @@ a,
 a:visited,
 button {
     text-decoration: none;
-    color: @colorBlue;
+    color: @colorLink;
 
     outline: 0;
 
@@ -120,16 +119,72 @@ hr {
 
 
 h1 {
+    margin: @defaultMargin 0;
+    margin-bottom: @defaultMargin*3;
     font-weight: 100;
     font-size: 2.2em;
+    color: @colorTextSecondary;
+
+    span {
+        font-weight: 500;
+    }
+
+    + h2 {
+        margin-top: 0;
+    }
 }
 
 h2 {
-    font-weight: 300;
-    font-size: 1.8em;
-    // text-transform: uppercase;
-    // background: @colorLink;
-    // color: @colorWhite;
+    display: inline-block;
+    padding: 0 @defaultPaddingHorizontal/4;
+    padding-bottom: 1px;
+    margin: @defaultMargin*3 0;
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: uppercase;
+    background: @colorTextSecondary;
+    color: @colorWhite;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+
+    + table {
+        margin-top: 0;
+    }
+}
+
+h3 {
+    margin: @defaultMargin 0;
+    padding: 0;
+    color: @colorTextSecondary;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+
+table {
+    width: 100%;
+    margin: @defaultMargin 0;
+
+    + h2,
+    + h3 {
+        margin-top: @defaultMargin*2;
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: fadeout(@colorGray, 70%);
+            }
+
+            td {
+                span {
+                    .dapp-shorten-text;
+                }
+            }
+        }
+    }
 }
 
 
