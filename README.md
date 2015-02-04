@@ -21,7 +21,7 @@ To use it in a Meteor app add the `less` package:
     $ meteor add less
 
 Copy this dapp-styles repo content into your apps `public` folder under `public/dapp-styles/`
-and link to the `dapp-styles.less` in the main less files of your project with:
+and link to the `dapp-styles.less` in the main less file of your project with:
 
     @import 'public/dapp-styles/dapp-styles.less';
 
