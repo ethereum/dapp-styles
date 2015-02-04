@@ -13,7 +13,7 @@ To use it as CSS file just link the css file from the `dist/` folder. **(No done
 ### LESS
 To use it as less file, which would allow you to overwrite all constants 
 from the `constant.import.less` and use the mixins from `mixins.import.less`.
-Just link the `dapp-styles.less` in your apps main less file.
+Just link the `dapp-styles.less` in your apps main LESS file.
 
 ### Meteor
 To use it in a Meteor app add the `less` package:
@@ -21,7 +21,7 @@ To use it in a Meteor app add the `less` package:
     $ meteor add less
 
 Copy this dapp-styles repo content into your apps `public` folder under `public/dapp-styles/`
-and link to the `dapp-styles.less` in the main less file of your project with:
+and link to the `dapp-styles.less` in the main LESS file of your project with:
 
     @import 'public/dapp-styles/dapp-styles.less';
 
@@ -29,7 +29,7 @@ and link to the `dapp-styles.less` in the main less file of your project with:
 
 ## Usage
 
-The main layout consists of the following HTML elements:
+A full layout consists of the following HTML elements:
 
 ```html
 
@@ -65,7 +65,7 @@ The main layout consists of the following HTML elements:
 
 This gives you a basic flex box layout with a fixed header height and footer height, and a growable content area.
 
-You can remove any part (header, footer, asides) of it and still have nice fitting containers.
+**Note: You can remove any part (header, footer, asides) of it and still have nice fitting containers.**
 
 ### Using overflow auto in containers
 
@@ -80,7 +80,7 @@ html, body {
 
 ### Mixins
 
-When you use the less version, of the framework then you will be able
+When you use the less version of the framework you will be able
 to use all its LESS mixins including the LESSHAT mixins (https://github.com/madebysource/lesshat, which are used by the dapp-styles) in your own LESS files.
 
 ### Elements
