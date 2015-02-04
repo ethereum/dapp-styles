@@ -7,7 +7,7 @@ These styles give a simple basic layout for your Ðapps.
 
 
 ### CSS
-To use it as CSS file just link the css file from the `dist/` folder. (Noy done yet.. sorry, compile yourself please)
+To use it as CSS file just link the css file from the `dist/` folder. **(No done yet.. sorry, compile yourself please)**
 
 
 ### LESS
