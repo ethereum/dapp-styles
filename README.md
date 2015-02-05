@@ -126,7 +126,7 @@ TODO
 
 #### Menus
 
-To add a header or aside menu just add the follwowing structure to your `.dapp-header` or `dapp-aside`:
+To add a header or aside menu just add the follwowing structure to your `.dapp-header` or `dapp-aside` container:
 
 ```html
 <nav>
