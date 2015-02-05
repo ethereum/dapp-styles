@@ -3,6 +3,8 @@
 
 These styles give a simple basic layout for your Ðapps.
 
+**Note: This is a very early stage of the package, not all elements are explained, or ready to use. Use it just to try.**
+
 ## The Design
 
 The Ethereum Dapp design style is meant to ease the task of designing clear and good looking App interfaces. It uses as few images as possible for the UI and instead uses colors and icons for differentiating hierarchies. In order to make each Dapp unique and help the user quickly realize where he is even when navigating different instances of the same app, we use GeoPatterns in backgrounds when they refer to a unique instance of something. The fonts used are all open source, Source Sans, from Adobe which has a rich family and multiple styles and Montserrat for bold and strong titles. We also use a font for vector icons to ensure scalability and easy customization.
@@ -121,5 +123,27 @@ to use all its LESS mixins including the LESSHAT mixins (https://github.com/made
 ### Elements
 
 TODO
+
+#### Menus
+
+To add a header or aside menu just add the follwowing structure to your `.dapp-header` or `dapp-aside`:
+
+```html
+<nav>
+    <ul>
+        <li>
+            <a href="#" class="active">
+                <i class="icon-arrow-down3"></i>
+                <span>Receive</span>
+            </a>
+            <a href="#">
+                <i class="icon-arrow-up2"></i>
+                <span>Send</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+```
+
 
 
