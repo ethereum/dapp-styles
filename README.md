@@ -145,5 +145,65 @@ To add a header or aside menu just add the follwowing structure to your `.dapp-h
 </nav>
 ```
 
+### Containers
+
+To limit the width of you content use the `.dapp-container` class,
+which will center your content and limit it to a max width tof 960px (You can overwrite that with the `@widthContainer` variable).
+
+```html
+<div class="dapp-container">
+    ...
+</div>
+```
+
+#### Grids
+
+dapp-styles uses the base grid system from Matthew Hartman. For a full documentation see http://matthewhartman.github.io/base/docs/grid.html
+The grid system is based on 12 columns and can be placed anywhere in you HTML.
+
+To create a simple grid use the `row`, `col` and `col-x` classes.
+
+```html
+<div class="row clear">
+    <div class="col col-1 tablet-col-11 mobile-col-1-2">
+        <span class="no-tablet no-mobile">1</span>
+        <span class="no-desktop show-tablet no-mobile">11</span>
+        <span class="no-desktop no-tablet show-mobile">1-2</span>
+    </div>
+    <div class="col col-11 tablet-col-1 mobile-col-1-2">
+        <span class="no-tablet no-mobile">11</span>
+        <span class="no-desktop show-tablet no-mobile">1</span>
+        <span class="no-desktop no-tablet show-mobile">1-2</span>
+    </div>
+</div>
+```
+
+To change the column size for mobile and tablets you can use the following classes:
+
+- `.mobile-full` sets column width to 100% and removes floats for mobile devices
+- `.tablet-full` sets column width to 100% and removes floats for tablet devices
+- `.col-1-2` sets column width to 50% for all devices
+- `.col-1-3` sets column width to 33% for all devices
+- `.col-1-4` sets column width to 25% for all devices
+- `.col-3-4` sets column width to 75% for all devices
+- `.tablet-col-1-2` sets column width to 50% for tablet devices
+- `.tablet-col-1-3` sets column width to 33% for tablet devices
+- `.tablet-col-1-4` sets column width to 25% for tablet devices
+- `.tablet-col-3-4` sets column width to 75% for tablet devices
+- `.mobile-col-1-2` sets column width to 50% for mobile devices
+- `.mobile-col-1-3` sets column width to 33% for mobile devices
+- `.mobile-col-1-4` sets column width to 25% for mobile devices
+- `.mobile-col-3-4` sets column width to 75% for mobile devices
+
+##### Breakpoints
+
+To change change the break points overwrite the following variables:
+
+- `@widthContainer` default: @gridWidth * 30; // 32px * 30 = 960px
+- `@widthTablet` default: @gridWidth * 20; // 32px * 20 = 640px
+- `@widthMobile` default: 100%; // mobile is everything below the `@widthTablet` breakpoint 
+
+
+
 
 
