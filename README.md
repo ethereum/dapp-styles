@@ -117,8 +117,7 @@ html, body {
 
 ### Development grid
 
-![HEX Grid](https://cloud.githubusercontent.com/assets/232662/6078219/28265c56-adf7-11e4-9568-69675647e894.png)
-<img src="https://cloud.githubusercontent.com/assets/232662/6078219/28265c56-adf7-11e4-9568-69675647e894.png" alt="HEX Grid">
+<img src="https://cloud.githubusercontent.com/assets/232662/6078219/28265c56-adf7-11e4-9568-69675647e894.png" alt="HEX Grid" width="100">
 
 
 To show a HEX grid for element alignment just add the `<div class="dapp-grid"></div>` element to your `<body>` tag.
