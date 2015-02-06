@@ -115,6 +115,10 @@ html, body {
 }
 ```
 
+### Development grid
+
+To show a HEX grid for element alignment just add the `<div class="dapp-grid"></div>` element to your `<body>` tag.
+
 ### Mixins
 
 When you use the less version of the framework you will be able
