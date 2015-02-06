@@ -23,6 +23,13 @@ body {
 
 }
 
+// Special cases on a full screen dapp in mist
+.ethereum-dapp-url-bar-style-transparent {
+    .dapp-header {
+        padding-top: 4 * @gridHeight;
+    }
+}
+
 
 // DEBUG GRID
 .dapp-grid {
@@ -60,13 +67,6 @@ body {
     position: relative;
     padding: @defaultPaddingVertical @defaultPaddingHorizontal;
     .box-sizing(border-box);
-}
-
-// Special cases on a full screen dapp in mist
-.ethereum-dapp-url-bar-style-transparent {
-    .dapp-header {
-        padding-top: 4 * @gridHeight;
-    }
 }
 
 .dapp-header {
