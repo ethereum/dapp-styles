@@ -117,6 +117,8 @@ html, body {
 
 ### Development grid
 
+![screen shot 2015-02-06 at 11 55 39 = 100x](https://cloud.githubusercontent.com/assets/232662/6078219/28265c56-adf7-11e4-9568-69675647e894.png)
+
 To show a HEX grid for element alignment just add the `<div class="dapp-grid"></div>` element to your `<body>` tag.
 
 ### Mixins
