@@ -284,6 +284,23 @@ body {
 }
 
 
+.dapp-box {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: @gridHeight * 8;
+    background-color: @colorWhite;
+    // border: 1px solid @colorGrayDark;
+    .dapp-shadow-medium;
+
+    h2 {
+        margin: 0;
+        background-color: transparent;
+        color: @colorTextSecondary;
+    }
+}
+
+
 // MODAL the full styles are in the ethereum:elements package
 .dapp-modal-overlay {  
     background: fadeout(@colorBackgroundOverlay, 50%);
