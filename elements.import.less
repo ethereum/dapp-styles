@@ -47,7 +47,13 @@
     color: darken(@colorBackgroundAside, 20%);    
 }
 
-
+.dapp-url-bar {
+    display: block;
+    text-align: center;
+    width: 100%;
+    // .calc(width, ~'100% - 64px');    
+    .border-radius(8px);
+}
 
 
 // default elements
@@ -95,6 +101,10 @@ h1 {
 
     + h2 {
         margin-top: 0;
+    }
+
+    strong {
+        font-weight: 400;
     }
 }
 
