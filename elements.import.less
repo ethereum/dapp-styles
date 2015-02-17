@@ -48,8 +48,10 @@
 }
 
 .dapp-url-bar {
+    display: block;
     text-align: center;
-    .calc(width, ~'100vw - 64px');    
+    width: 100%;
+    // .calc(width, ~'100% - 64px');    
     .border-radius(8px);
 }
 
@@ -189,6 +191,23 @@ table {
     input {
         .dapp-input;
     }
+
+    .dapp-error + .dapp-identicon {
+        display: none;
+    }
+
+    .icon-shield {
+        display: none;
+        position: absolute;
+        top: 9px;
+        left: 13px;
+        font-size: 1.4em;        
+        color: @colorStrongRed;
+    }
+    
+    .dapp-error + .dapp-identicon + .icon-shield {
+        display: block;
+    }    
 }
 
 // forms
@@ -215,7 +234,13 @@ textarea {
     &.dapp-large {
         font-size: 1.5em;
     }
+    &.dapp-error {
+        color: @colorStrongRed;
+        background: @colorLightRed;
+        border-color: @colorRed;
+    }
 }
+
 :disabled {
     color: @colorGrayDark;
     // background-color: @colorGrayLight;
