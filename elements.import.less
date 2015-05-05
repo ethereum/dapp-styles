@@ -6,7 +6,7 @@
     position: relative;
     width: 100%;
     height: @gridHeight;
-    border: 1px solid @colorGreen;
+    border-bottom: 1px solid @colorGreen;
 
     > span {
         display: block;
@@ -17,12 +17,12 @@
         right: 0;
         line-height: @gridHeight;
         text-align: center;
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
 
     .dapp-bar {
         height: 100%;
-        background-color: @colorGreen;
+        .background-image(linear-gradient(to bottom, @colorGreen 0%, lighten(@colorGreen, 20%) 100%));
 
         // ANIMATION
         .transition(width @animationSpeed*26 linear);
@@ -178,7 +178,7 @@ table {
         tbody {
             tr {
 
-                &:nth-child(odd) {
+                &:nth-child(even) {
                     background-color: fadeout(@colorGray, 70%);
                 }
             }
@@ -188,6 +188,16 @@ table {
     + h2,
     + h3 {
         margin-top: @defaultMargin*2;
+    }
+
+    thead {
+        background-color: @colorTextSecondary;
+        color: @colorWhite;
+        text-transform: uppercase;
+
+        tr {
+            border-bottom: @gridHeight/2 solid transparent;
+        }
     }
 
     tbody {
