@@ -1,5 +1,4 @@
 # Ðapp styles
-*Version 0.2*
 
 These styles give a simple basic layout for your Ðapps.
 
@@ -18,6 +17,31 @@ Most apps are different variations of some simple elements:
 * Use the right action bar for actions to be done with the current content 
 
 * Use Dapp-overflow if you want the sections to scroll independently and to remain fixed on the screen
+
+
+## Setup
+
+
+### CSS
+To use it as CSS file just link the css file from the `dist/` folder. **(No done yet.. sorry, compile yourself please)**
+
+
+### LESS
+To use it as less file, which would allow you to overwrite all constants 
+from the `constant.import.less` and use the mixins from `mixins.import.less`.
+Just link the `dapp-styles.less` in your apps main LESS file.
+
+### Meteor
+To use it in a Meteor app add the `less` package:
+
+    $ meteor add less
+    $ meteor add ethereum:dapp-styles
+
+Adn add the following to your main less file:
+
+    @import '{ethereum:dapp-styles}/dapp-styles.less';
+
+
 
 ### Screenshots 
 **These are early screenshots and many things are bound to change during development**
@@ -38,29 +62,6 @@ Most apps are different variations of some simple elements:
 
 ![Chat application, profile view](https://cloud.githubusercontent.com/assets/112898/6045469/7316d3ca-ac81-11e4-8855-5a88fc0ac92e.png)
 
-
-
-## Setup
-
-
-### CSS
-To use it as CSS file just link the css file from the `dist/` folder. **(No done yet.. sorry, compile yourself please)**
-
-
-### LESS
-To use it as less file, which would allow you to overwrite all constants 
-from the `constant.import.less` and use the mixins from `mixins.import.less`.
-Just link the `dapp-styles.import.less` in your apps main LESS file.
-
-### Meteor
-To use it in a Meteor app add the `less` package:
-
-    $ meteor add less
-    $ meteor add ethereum:dapp-styles
-
-Adn add the following to your main less file:
-
-    @import '{ethereum:dapp-styles}/dapp-styles.less';
 
 
 
