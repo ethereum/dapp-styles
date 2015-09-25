@@ -1,0 +1,41 @@
+{
+  "name": "dapp-styles",
+  "namespace": "ethereum",
+  "version": "0.2.0",
+  "description": "CSS/LESS framework for dapps",
+  "directories": {
+    "lib": "./"
+  },
+  "devDependencies": {
+    "gulp": ">=3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-replace": "^0.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ethereum/dapp-styles.git"
+  },
+  "homepage": "https://github.com/ethereum/dapp-styles",
+  "bugs": {
+    "url": "https://github.com/ethereum/dapp-styles/issues"
+  },
+  "keywords": [
+    "ethereum",
+    "dapp",
+    "styles"
+  ],
+  "author": "ethdev.com",
+  "authors": [
+    {
+      "name": "Alexander van de Sande",
+      "email": "avsa@ethdev.com",
+      "homepage": "https://github.com/alexvandesande"
+    },
+    {
+      "name": "Fabian Vogelsteller",
+      "email": "fabian@ethdev.com",
+      "homepage": "http://frozeman.de"
+    }
+  ],
+  "license": "MIST"
+}

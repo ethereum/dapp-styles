@@ -1,5 +1,5 @@
 # Ðapp styles
-*Version 0.1*
+*Version 0.2*
 
 These styles give a simple basic layout for your Ðapps.
 
@@ -50,17 +50,17 @@ To use it as CSS file just link the css file from the `dist/` folder. **(No done
 ### LESS
 To use it as less file, which would allow you to overwrite all constants 
 from the `constant.import.less` and use the mixins from `mixins.import.less`.
-Just link the `dapp-styles.less` in your apps main LESS file.
+Just link the `dapp-styles.import.less` in your apps main LESS file.
 
 ### Meteor
 To use it in a Meteor app add the `less` package:
 
     $ meteor add less
+    $ meteor add ethereum:dapp-styles
 
-Copy this dapp-styles repo content into your apps `public` folder under `public/dapp-styles/`
-and link to the `dapp-styles.less` in the main LESS file of your project with:
+Adn add the following to your main less file:
 
-    @import 'public/dapp-styles/dapp-styles.less';
+    @import '{ethereum:dapp-styles}/dapp-styles.less';
 
 
 
