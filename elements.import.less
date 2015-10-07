@@ -233,6 +233,28 @@ progress {
         }
     }
 }
+
+
+.dapp-modal-buttons {
+    .display(flex);
+    .justify-content(flex-end);
+    
+    margin: @gridHeight @gridWidth 0;
+
+    button, a, a:visited {
+        .flex(0 0 auto);
+        font-size: 1.1em;
+        max-width: none;
+        margin: @defaultPaddingVertical @defaultPaddingHorizontal;
+        font-weight: 300;
+
+        &.dapp-primary-button {
+            font-weight: 500;
+        }
+    }
+}
+
+
 // default elements
 
 a,
