@@ -19,12 +19,13 @@
 .dapp-block-button,
 .dapp-block-button:visited {
     .dapp-button-reset;
-    height: @gridHeight * 2;
-    min-width: 100px;
+    height: @gridHeight * 3;
+    min-width: 140px;
     padding: @gridHeight/4 @gridWidth/3;
     background: @colorLink;
     color: @colorWhite;
     border-bottom: 3px solid darken(@colorLink, 5%);
+    .box-sizing(border-box);    
     .border-radius(2px);
     .dapp-shorten-text;
 
