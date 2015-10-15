@@ -94,17 +94,19 @@ body {
     nav {
         width: 100%;
 
-        ul {
+        &> ul {
             .dapp-horizontal-menu;
             display: flex;
             align-items: flex-end;
 
-            li {
+            &> li {
                 flex: 0 1 auto;
+                &> a {
+                    display: inline-block;
+                }
             }
 
             a {
-                display: inline-block;
                 padding: @defaultPaddingVertical/2 @defaultPaddingHorizontal;
                 text-align: center;
                 border-bottom: 5px solid transparent;

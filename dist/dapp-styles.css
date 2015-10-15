@@ -2834,7 +2834,6 @@ body.blur .dapp-header {
   list-style: none;
 }
 .dapp-header nav ul li {
-  display: inline-block;
   padding: 0;
   margin: 0;
 }
