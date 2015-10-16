@@ -442,6 +442,7 @@ table {
 
     &:disabled {
         color: @colorGrayDark;
+        opacity: 0.5;
     }
 
     &.dapp-tiny {
@@ -464,6 +465,7 @@ table {
 .dapp-address-input {
     input {
         .dapp-input;
+    
     }
 }
 
@@ -668,11 +670,11 @@ select {
         color: @colorLink;
         background: @colorGrayLight;
         padding: @defaultPaddingVertical @defaultPaddingHorizontal;
-        margin: 0;
+        margin: 1px;
         text-align: center;
         text-transform: uppercase;
-        font-weight: 500;
-        border: solid @colorGray 1px;
+        font-weight: 400;
+        // border: solid @colorGray 1px;
         border-right-width: 0;
         .transition(background-color @animationSpeed/2);
 
