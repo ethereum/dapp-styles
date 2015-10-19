@@ -437,11 +437,13 @@ table {
     border-bottom: solid 2px @colorGray;
     background-color: @colorGrayLight;
     color: @colorLink;
+    .transition(opacity 1s);
 
     .placeholder(@colorGray);
 
     &:disabled {
         color: @colorGrayDark;
+        opacity: 0.25;
     }
 
     &.dapp-tiny {
@@ -464,6 +466,7 @@ table {
 .dapp-address-input {
     input {
         .dapp-input;
+    
     }
 }
 
@@ -653,4 +656,44 @@ fieldset {
 }
 select {
     height: 45px;
+}
+
+// turns radio buttons in segmented controls
+.dapp-segmented-control {
+    display: flex;
+
+    input {
+        display: none;
+    }
+
+    label {
+        color: @colorGrayDark;
+        color: @colorLink;
+        background: @colorGrayLight;
+        padding: @defaultPaddingVertical @defaultPaddingHorizontal;
+        margin: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 400;
+        // border: solid @colorGray 1px;
+        border-right-width: 0;
+        .transition(background-color @animationSpeed/2);
+
+        &:nth-child(2) {
+            border-radius: 4px 0 0 4px;
+        }        
+
+        &:last-child {
+            border-right-width: 1px;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+
+    input:checked + label {
+        background: @colorGray;
+        border-color: @colorGray;
+        color: @colorGrayDark;
+    }
+
+
 }
