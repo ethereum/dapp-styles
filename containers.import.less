@@ -101,6 +101,7 @@ body {
 
             &> li {
                 flex: 0 1 auto;
+
                 &> a {
                     display: inline-block;
                 }
@@ -111,18 +112,17 @@ body {
                 text-align: center;
                 border-bottom: 5px solid transparent;
                 color: darken(@colorLink, 10%);
+                .transform-origin(50% 100%);
 
                 &:focus {
                     border-color: @colorWhite;
                 }
                 &.active {
-                    .transform-origin(50% 100%);
                     color: darken(@colorBackgroundHeader, 20%);
-
                     border-bottom: 5px solid @colorWhite;
                 }
                 &:active {
-                    border-bottom-color: transparent;
+                    // border-bottom-color: transparent;
                 }
 
                 i {
