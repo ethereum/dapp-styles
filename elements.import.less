@@ -666,14 +666,14 @@ select {
 
 // turns radio buttons in segmented controls
 .dapp-segmented-control {
-    display: flex;
+    .display(flex);
 
     input {
         display: none;
     }
 
     label {
-        color: @colorGrayDark;
+        .flex(1);
         color: @colorLink;
         background: @colorGrayLight;
         padding: @defaultPaddingVertical @defaultPaddingHorizontal;
@@ -681,17 +681,17 @@ select {
         text-align: center;
         text-transform: uppercase;
         font-weight: 400;
-        // border: solid @colorGray 1px;
         border-right-width: 0;
+        cursor: pointer;
         .transition(background-color @animationSpeed/2);
 
         &:nth-child(2) {
-            border-radius: 4px 0 0 4px;
+            .border-radius(4px 0 0 4px);
         }        
 
         &:last-child {
             border-right-width: 1px;
-            border-radius: 0 4px 4px 0;
+            .border-radius(0 4px 4px 0);
         }
     }
 
