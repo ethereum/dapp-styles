@@ -34,6 +34,17 @@
     font-weight: 400;
     text-transform: uppercase;
 
+    &.dapp-small {
+        height: @gridHeight*1.7;
+        min-width: 100px;
+        font-size: 0.8em;
+        border-bottom-width: 0;
+
+        &:focus {
+            border-bottom-width: 0;
+        }
+    }
+
     &:focus {
         border-bottom: 3px solid darken(@colorLink, 5%);
         .opacity(0.8);
