@@ -16,15 +16,6 @@
 
 /* #### All small tablets screens #### */
 @media screen and (max-width: 768px){
-
-}
-
-/* #### All small phone screens landscape #### */
-@media screen and (max-width: 576px){
-    aside.dapp-main {
-        .flex(0 0 @widthSidebarSmall);
-    }
-
     .dapp-actionbar {
         flex: 1 auto;
         nav ul {
@@ -33,6 +24,13 @@
                 flex: 1
             } 
         }
+    }
+}
+
+/* #### All small phone screens landscape #### */
+@media screen and (max-width: 576px){
+    aside.dapp-main {
+        .flex(0 0 @widthSidebarSmall);
     }
 
     .dapp-header {
