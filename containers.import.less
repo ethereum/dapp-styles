@@ -5,7 +5,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: @colorWhite;
-    font: 100 16px 'Source Sans Pro', 'Helvetica Neue', arial, sans-serif;
+    font: 100 16px @fontFamily;
     color: @colorTextPrimary;
 
     // lock scroll and blur content
@@ -68,15 +68,15 @@ body {
 }
 
 .dapp-header {
-    display: flex;
-    align-items: flex-end;
+    .display(flex);
+    .align-items(flex-end);
     height: @heightHeader;
     z-index: 50;
     margin-top: -5px; // necessary to make sure, that its looks good, when blurred
     padding-top: @defaultPaddingVertical + 5px; 
     padding-bottom: 0;
-    .box-sizing(content-box);
     .background-image(linear-gradient(to bottom,  lighten(@colorBackgroundHeader, 15%) 0, @colorBackgroundHeader 90%));
+    .box-sizing(content-box);
     .user-select(none);
 
     &.dapp-small {
@@ -87,10 +87,36 @@ body {
         }
     }
 
-    &>.dapp-flex-item {
-        flex: 1;
+    &> .dapp-flex-item {
+        .flex(1);
     }
 
+    // title
+    .dapp-title {
+        position: absolute;
+        top: @defaultMargin/2;
+        right: @defaultMargin;
+        text-align: right;
+    }
+    hgroup.dapp-title {
+        h1, h2 {
+            margin: 0
+        }
+        h2 {
+            padding: 0;
+            background-color: transparent;
+            color: @colorTextSecondary;
+            text-transform: none;
+            font-family: @fontFamily;
+            font-weight: 300;
+        }
+    }
+    h1.dapp-title {
+        top: @defaultMargin*1.2;
+        margin: 0;
+    }
+
+    // nav
     nav {
         width: 100%;
 
@@ -101,25 +127,36 @@ body {
 
             &> li {
                 flex: 0 1 auto;
+                margin-bottom: 1px;
 
                 &> a {
                     display: inline-block;
                 }
+
+                &.active a,
+                &.active button,
+                button.active,
+                a.active {
+                    color: darken(@colorBackgroundHeader, 20%);
+                    border-bottom: 5px solid @colorWhite;
+                }
             }
 
-            a {
+
+            a,
+            a:visited,
+            button {
                 padding: @defaultPaddingVertical/2 @defaultPaddingHorizontal;
                 text-align: center;
                 border-bottom: 5px solid transparent;
                 color: darken(@colorLink, 10%);
                 .transform-origin(50% 100%);
 
+                text-transform: uppercase;
+                font-weight: 400;
+
                 &:focus {
                     border-color: @colorWhite;
-                }
-                &.active {
-                    color: darken(@colorBackgroundHeader, 20%);
-                    border-bottom: 5px solid @colorWhite;
                 }
                 &:active {
                     // border-bottom-color: transparent;
@@ -134,8 +171,6 @@ body {
 
                 span {
                     display: block;
-                    text-transform: uppercase;
-                    font-weight: 400;
                 }
 
             }
@@ -145,7 +180,7 @@ body {
 
 .dapp-footer {
     height: @heightFooter;
-    background-color: @colorBlack;
+    background-color: @colorBackgroundFooter;
 }
 
 // Makes the content with asides align in rows
@@ -159,11 +194,11 @@ body {
 .dapp-content {
     .flex(1);
     background: @colorWhite;
+    max-width: @maxContentWidth;
 
     &.dapp-has-header {
         padding-top: 120px + 3 * @defaultPaddingVertical;
     }
-
 
     .dapp-content-header {
         position: fixed;
@@ -178,14 +213,18 @@ body {
         .dapp-shadow-medium;
         .box-sizing(border-box);
     }
+
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
 }
 
 
 .dapp-aside {
     .flex(0 0 @widthSidebar);
     padding-right: 0;
-    .background-image(linear-gradient(to bottom,  lighten(@colorBackgroundAside, 15%) 0, @colorBackgroundAside 100px));
-
+    background-color: @colorBackgroundAside;
 
 
     // ANIMATION
@@ -198,11 +237,39 @@ body {
 
             li {
 
-                a, a:visited, button {
-                    // display: block;
+
+                &.active a,
+                &.active button,
+                a.active,
+                button.active {
+                    background-color: @colorWhite;
+                    border-top: none;        
+                    color: @colorBlack; 
+                    font-weight: 500;
+
+                    &:focus {
+                        background-color: fadeout(@colorWhite, 10%);
+                    }
+                }
+
+                // remove the top border
+                &:first-child a,
+                &:first-child button,
+                &.active + li > a,
+                &.active + li > button,
+                + li > a.active,
+                + li > button.active,
+                &.dapp-main-button + li  {
+                    border-top: 0;
+                }
+
+                a,
+                a:visited,
+                button {
                     .display(flex);
                     .align-items(center);
                     position: relative;
+                    width: 100%;
                     min-height: @gridHeight*4;
                     max-height: @gridHeight*5;
                     padding: @defaultPaddingVertical @defaultPaddingHorizontal;
@@ -218,6 +285,10 @@ body {
                     font-weight: 300;
                     line-height: 20px;
 
+                    &:focus {
+                        background-color: fadeout(@colorWhite, 90%);
+                        border-bottom: 0;
+                    }
                     &:active {
                         .transform-origin(100% 50%);
                         .scale(0.98);
@@ -253,20 +324,6 @@ body {
                         right: @gridWidth / 4;
                         top: @gridHeight * 1.5;
                     }
-                }
-
-                &.active a {
-                    background: @colorWhite;
-                    border-top: none;        
-                    color: @colorBlack; 
-                    font-weight: 500;       
-                }
-
-                // remove the top border
-                &:first-child a,
-                &.active + li > a,
-                &.dapp-main-button + li  {
-                    border-top: 0;
                 }
             }
         }
