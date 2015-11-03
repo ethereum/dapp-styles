@@ -189,11 +189,14 @@ body {
     // .flex-direction(column);
     .flex(1);
     // max-height: 100vh;//85vh;
+    background: @colorWhite;
+
 }
 
 .dapp-content {
     .flex(1);
-    background: @colorWhite;
+    max-width: @maxContentWidth;
+    margin: 0 auto;
 
     &.dapp-has-header {
         padding-top: 120px + 3 * @defaultPaddingVertical;
