@@ -164,7 +164,7 @@ To create a simple grid use the `row`, `col` and `col-x` classes.
         <span class="no-desktop show-tablet no-mobile">11</span>
         <span class="no-desktop no-tablet show-mobile">1-2</span>
     </div>
-    <div class="col col-11 tablet-col-1 mobile-col-1-2">
+    <div class="col col-11 tablet-col-1 mobile-full">
         <span class="no-tablet no-mobile">11</span>
         <span class="no-desktop show-tablet no-mobile">1</span>
         <span class="no-desktop no-tablet show-mobile">1-2</span>
