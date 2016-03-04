@@ -1,7 +1,7 @@
 Package.describe({
   name: 'ethereum:dapp-styles',
   summary: 'CSS/LESS framework for dapps',
-  version: '0.4.7',
+  version: '0.4.7.1',
   git: 'http://github.com/ethereum/dapp-styles'
 });
 
