@@ -144,24 +144,19 @@ progress {
         min-height: @gridHeight * 2.5;
         position: relative;
         overflow: hidden;
-        border-bottom: solid 1px @colorWhite;
-        .background-image(linear-gradient(to top, transparent 0%, lighten(@colorGrayLight, 0%) 100%));
         font-family: @fontFamily;
 
 
-        &.selected,
         button.selected {
-            background: @colorLink;
             min-height: @gridHeight * 2;
+            border-left: 3px solid @colorLink;
 
-            &:hover,
-            &:focus {
-                background: @colorLink;
-            }
-
-            h3, span {
-                color: @colorWhite;
-                text-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0;
+            .dapp-identicon {
+                margin-top: -2px;
+                margin-left: -2px; 
+                border: 2px solid @colorGray;
+                width: 36px;
+                height: 36px;
             }
 
             figure {
@@ -194,11 +189,22 @@ progress {
             min-height: @gridHeight * 2;
             font-family: @fontFamily;
             text-align: left;
+            border-left-color: @colorGray;
+            border-left-style: solid;
+            outline: none;
+            .transition(border 0.25s);
 
-            &:hover,
             &:focus {
-                background: @colorWhite;
-                border: 0;
+                border-bottom: none !important;                
+            }
+
+            &:hover {
+                border-left-width: 6px;
+                border-bottom: none !important;                
+            }
+
+            &:active {
+                transform: scale(1) !important;
             }
 
         }
