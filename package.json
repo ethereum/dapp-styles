@@ -1,7 +1,7 @@
 {
   "name": "dapp-styles",
   "namespace": "ethereum",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "CSS/LESS framework for dapps",
   "directories": {
     "lib": "./"
@@ -27,8 +27,8 @@
   "author": "ethdev.com",
   "authors": [
     {
-      "name": "Alexander van de Sande",
-      "email": "avsa@ethdev.com",
+      "name": "Alex van de Sande",
+      "email": "avsa@ethereum.org",
       "homepage": "https://github.com/alexvandesande"
     },
     {
