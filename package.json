@@ -6,6 +6,9 @@
   "directories": {
     "lib": "./"
   },
+  "dependencies": {
+    "simple-line-icons": "^2.4.1"
+  },
   "devDependencies": {
     "gulp": ">=3.9.0",
     "gulp-less": "^3.0.3",
